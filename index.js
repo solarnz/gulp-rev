@@ -74,6 +74,7 @@ var plugin = function () {
 			return;
 		}
 
+		file.path = path.relative(process.cwd(), file.path);
 		var oldPath = file.path;
 		transformFilename(file);
 		pathMap[oldPath] = file.revHash;
